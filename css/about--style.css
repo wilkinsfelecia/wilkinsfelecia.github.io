@@ -1,0 +1,148 @@
+#main--container {
+    display: grid;
+    grid-template-columns: .5fr .25fr 1fr .25fr 1fr .25fr;
+    grid-template-rows: .5fr .25fr 1fr .25fr 1fr .25fr;
+
+    height: 100vh;
+    background: #3C3C3C;
+    color: whitesmoke;
+
+    grid-gap: 1em;
+}
+
+#main--container > * {padding: .5em;}
+
+#about--title {
+    grid-column: 4/6;
+    grid-row: 1/3;
+
+    background:  rgba(165, 123, 255, .5);
+
+    text-align: right;
+    font-size: 2em;
+    order: 1;
+
+    margin-top: .5em;
+}
+
+#about--image {
+    grid-column: 2/5;
+    grid-row: 3/5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about--image img {
+    border: .25em solid rgb(111, 100, 204);
+}
+
+#about--links {
+    grid-column: 1/3;
+    grid-row: 4/6;
+
+    background:  rgba(165, 123, 255, .5);
+
+    display: flex;
+    flex-flow: column wrap;
+    align-items: flex-end;
+    justify-content: flex-end;
+    
+    margin-left: 1em;
+}
+
+#about--links a {
+    color: #aba5f2;
+    background: #1D1D1D;
+}
+
+#about--links a:hover {
+    /* filter: blur(.10em); */
+
+    background: whitesmoke;
+    color: black;
+}
+
+#about--links p {background: #5a549c; margin: .25em; padding: .25em;}
+
+#about--details {
+    grid-column: 5/7;
+    grid-row: 3/6;
+
+    height: 60vh;
+    overflow-y: scroll;
+}
+
+footer {
+    grid-column: 1/7;
+    grid-row: 6/7;
+
+    background: #1D1D1D;
+    color: whitesmoke;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+footer p {margin: 0;}
+
+#footer--title {
+    margin-right: auto;
+}
+
+#footer--links a {
+    margin-right: 2em;
+
+    color: whitesmoke;
+    font-style: italic;
+}
+
+#footer--links a:last-child {
+    margin-right: 0em;
+}
+
+#footer--links a:active {
+    border-bottom: 3px solid #493fa1;
+}
+
+#footer--links a:hover {
+    color: #7872c2;
+}
+
+@media (max-width: 920px) {
+    #main--container {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+
+    #about--title {
+        order: 0; 
+        
+        text-align: center;
+        font-size: 2.5em;
+        margin-top: 0em;
+    }
+
+    #about--title h2 {padding: 0; margin: 0;}
+
+    #about--details {
+        height: auto;
+        overflow-y: auto;
+    }
+
+    #about--links {
+        align-items: center;
+        margin-left: 0em;
+
+        order: 4;
+
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    #about--image img {width: 45%; border-radius: 50%; margin-bottom: -2em;}
+
+    footer {order: 5;}
+}
