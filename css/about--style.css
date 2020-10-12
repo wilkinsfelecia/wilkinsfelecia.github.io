@@ -106,8 +106,8 @@ footer p {margin: 0;}
     color: #7872c2;
 }
 
-#footer .active {
-    border-bottom: 3px solid #fff;
+footer .active {
+    border-top: 3px solid #6c62c7;
 }
 
 @media (max-width: 920px) {
