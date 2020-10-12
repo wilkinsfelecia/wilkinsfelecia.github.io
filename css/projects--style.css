@@ -38,12 +38,12 @@ footer p {margin: 0;}
     margin-right: 0em;
 }
 
-#footer--links a:active {
-    border-bottom: 3px solid #493fa1;
-}
-
 #footer--links a:hover {
     color: #7872c2;
+}
+
+#footer .active {
+    border-bottom: 3px solid #fff;
 }
 
 @media (max-width: 390px) {
