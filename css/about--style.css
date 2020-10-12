@@ -146,3 +146,30 @@ footer p {margin: 0;}
 
     footer {order: 5;}
 }
+
+
+
+@media (max-width: 390px) {
+    footer {
+        display: flex;
+        flex-flow: column wrap;
+        align-items: center;
+    }
+
+    #footer--title {
+        margin-right: 0em;
+        margin-top: 1em;
+        order: 1;
+    }
+    
+    #footer--links a {
+        margin-right: 0em;
+    
+        color: whitesmoke;
+        font-style: italic;
+        text-align: center;
+
+        display: flex;
+        flex-flow: column wrap;
+    }
+}
