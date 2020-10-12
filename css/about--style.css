@@ -107,7 +107,7 @@ footer p {margin: 0;}
 }
 
 footer .active {
-    border-top: 3px solid #6c62c7;
+    border-top:5px solid #6c62c7;
 }
 
 @media (max-width: 920px) {
@@ -142,7 +142,7 @@ footer .active {
         justify-content: space-evenly;
     }
 
-    #about--image img {width: 45%; border-radius: 50%; margin-bottom: -2em;}
+    #about--image img {width: 45%; border-radius: 50%;}
 
     footer {order: 5;}
 }
