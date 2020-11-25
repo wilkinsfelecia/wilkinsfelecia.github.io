@@ -3,9 +3,11 @@
 
 <head>
     <title>projects ♡</title>
+    <link rel="icon" type="image/png" href="/images/favicon.png"/>
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Didact+Gothic&family=Playfair+Display&display=swap" rel="stylesheet"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Quicksand&display=swap" rel="stylesheet">  
 
     <link rel="stylesheet" href="css/main--style.css"/>
     <link rel="stylesheet" href="css/projects--style.css"/>
@@ -15,16 +17,174 @@
 <body>
 
     <main>
-        <h3>This page is still under construction to ✨ prettify ✨ it.</h3>
-        <p>Below you will find links to previous projects I completed with a brief description.</p>
-        <small>* indicates that the listed project is under-development or will be updated soon.</small>
+        <nav>
+            <button class="btn" id="btn-code">coding</button>
+            <button class="btn" id="btn-grphx">graphics</button>
+            <button class="btn" id="btn-misc">misc.</button>
+        </nav>
 
-        <ul>
-            <li><a href="http://afro-cuba.net/" target="_blank">Afro-Cuba</a>: A static website designed with Bootstrap for an international client.</li>
-            <li>* <a href="http://student.elon.edu/fwilkins2/api_games/index.html" target="_blank">RAWG.IO API</a>: A CSS-grid layout designed website that pulls data from an API to populate content.</li>
-            <li>Bootstrap | TLOU II: A re-creation of an earlier version of this <a href="https://www.playstation.com/en-us/games/the-last-of-us-part-ii-ps4/" target="_blank">website</a> using the Bootstrap framework. [<a href="https://codepen.io/wilkinsfelecia/full/GRJVRxL" target="_blank">Version 1</a>] [* <a href="https://codepen.io/wilkinsfelecia/full/jObWZPg" target="_blank">Version 2</a>]</li>
-            <li><a href="https://codepen.io/wilkinsfelecia/pen/rNVXNrz" target="_blank">GSAP animation</a>: A SVG re-creation of the PS1 start-up screen.</li>
-        </ul>
+        <section id="projects--container">
+            <div id="coding--container">
+                <div class="project">
+                    <div class="img-container">
+                        <h2>AFRO-ATENAS (INTERNATIONAL CLIENT)</h2>
+                        <img src="/images/projects/coding/afro-atenas.png"/>
+                    </div>
+
+                    <div class="desc-container">
+                        <p>
+                            During my winter term at Elon University, I (and six other classmates) traveled to Matanzas, Cuba to work with Afro-Atenas. My teammates and I 
+                            worked diligently to create an online presence for the client by providing them with multiple videos and a dedicated webpage. I served as a 
+                            web developer throughout this project. My duties involved collaborating with the UI/UX designer to create interactive prototypes for users to 
+                            provide feedback on, testing the prototypes on different browsers/platforms, and coding the finalized responsive, user-friendly design.
+                        </p>
+
+                        <p>
+                            <li><a href="http://afro-cuba.net/" target="_blank">view the project</a></li>
+                        </p>
+                    </div>
+                </div>
+
+                <div class="line-break"></div>
+
+                <div class="project reverse">
+                    <div class="desc-container">
+                        <p>
+                            After learning about Google Maps API (<a href="/images/projects/unsolved-mysteries.png" target="_blank">and creating a project using it</a>) in my Interactive Writing and Design (web development) class, 
+                            we were tasked with finding another REST API and using its data to populate content for a self-designed website. Due to my undying love 
+                            for video games, I was elated to find <a href="https://rawg.io/games" target="_blank">RAWG.IO</a> and utilize its database to populate the 
+                            screen with revelant information (genre, screenshots, etc.) pertaining to the searched video game title. 
+                        </p>
+
+                        <p>
+                            <li><a href="http://student.elon.edu/fwilkins2/api_games/index.html" target="_blank">view the project</a></li>
+                        </p>
+                    </div>
+
+                    <div class="img-container">
+                        <h2>REST API (RAWG.IO)</h2>
+                        <img src="/images/projects/coding/rawgio-v1.png" width="600px"/>
+                    </div>
+                </div>
+
+                <div class="line-break"></div>
+
+                <div class="project">
+                    <div class="img-container">
+                        <h2>TLOU PART II BOOTSTRAP RE-CREATION</h2>
+                        <img src="/images/projects/coding/bootstrap-tlou.png"/>
+                    </div>
+
+                    <div class="desc-container">
+                        <p>In my Interactive Writing and Design class, which focused on web development, we were asked to re-create a website design using <a href="https://getbootstrap.com/docs/4.0/getting-started/introduction/" target="_blank">Bootstrap 4</a>. 
+                            Due to my love of video games, I chose to recreate PlayStation's <a href="https://www.thelastofus.playstation.com/" target="_blank">The Last of Us Part II website</a>, especially because I loved the design.
+                        </p>
+
+                        <p>
+                            <li><a href="https://codepen.io/wilkinsfelecia/full/jObWZPg" target="_blank">view the project</a></li>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+
+
+                <!-- graphics -->
+            <div id="graphics--container">
+                <div class="project g-one">
+                    <div class="img-container">
+                        <h2>kinetic typography</h2>
+                        <iframe width="560" height="315" src="https://www.youtube.com/embed/oebDt7IQPGY" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+
+                    <div class="desc-container">
+                        <p>
+                            In my Visual Aesthetics class, which focused on graphic design principles, we were told to create a kinetic 
+                            typography video that accompanied an audio of our choosing. 
+                            I chose the poem "<em>The Dream Keeper</em>" by Langston Hughes because I found it to be quite inspiring and uplifting.
+                        </p>
+
+                        <p>
+                            Each illustration was made in Adobe Illustrator and imported into After Effects afterwards to be animated.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="project g-one reverse">
+                    <div class="desc-container">
+                        <p>
+                            In the PDF you can see the storyboard I made to determine dynamic of each frame. The storyboard displays color 
+                            choices, typography, iconography, and descriptions of the animations I wanted to include.
+                        </p>
+                    </div>
+
+                    <div class="img-container">
+                        <iframe src="/files/animation-storyboard.pdf" class="pdf">
+                        </iframe>
+                    </div>
+                </div>
+
+                <div class="line-break"></div>
+
+                <div class="project" id="mobile-design">
+                    <div class="img-container">
+                        <h2>mobile application design</h2>
+                        <img src="/images/projects/graphics/md-app.gif"/>
+                    </div>
+
+                    <div class="desc-container">
+                        <p>
+                            Through my time at iMedia, I learned the importance of designing a persona to aid in fine-tuning design choices. For 
+                            the mobile design assignment, I created <a href="/images/projects/graphics/md-persona.webp" target="_blank">Phoebe Dixon</a> 
+                            (<a href="https://unsplash.com/photos/JoxDK32dxnk" target="_blank">photo credit</a>), a fictitious college student, to guide the type of application 
+                            features I would include. Through this persona, I decided that an application that allowed Phoebe to take notes, study 
+                            from said notes, and create alarms to notify her of assignments would help solve the issues she was having.
+                        </p>
+
+                        <p>
+                            After creating the persona, I went to the ole reliable― pencil and paper. I drafted up a couple of screen layout and 
+                            iconography ideas. Once getting feedback from others about what screens to include from my <a href="/images/projects/graphics/md-sketches.webp" target="_blank">traditional sketches</a>, I 
+                            went over to Illustrator to create <a href="/images/projects/graphics/md-digital-mockup.webp" target="_blank">digital mock-ups</a>.
+                        </p>
+
+                        <p>
+                            The process did not end there, though, because there's always room for improvement! After another round of critical 
+                            feedback, such as thinking of screen optimization, I went back to the whiteboard to create more efficient layout designs. 
+                            From there, I moved over to Adobe XD to add in the functionality and animations.
+                        </p>
+
+                        <p>
+                            <li><a href="https://xd.adobe.com/view/b5503421-8bb4-4275-5622-45b259abe938-c361/" target="_blank">view the project</a></li>
+                        </p>
+                    </div>
+                </div> 
+            </div>
+
+            <div id="misc--container">
+                <div class="project" id="m-one">
+                    <div class="img-container">
+                        <h2>Disciplinary Honors Research Paper</h2>
+                        <h4>"<em>Communicating Mental Illness in the Black American Community</em>"</h4>
+                    </div>
+
+                    <div class="desc-container">
+                        <p>
+                            During my senior year of undergraduate at UNC Greensboro, I conducted an original qualitative study as a part of my duties as 
+                            a Disciplinary Honors student. The study focused on the views of and experiences with mental illness in the Black American 
+                            community with a primary focus on the younger generation. This idea was explored via a communication-perspective to explore 
+                            the ideas held about mental illness in the Black American community, the factors that influence said communication, and how 
+                            mental illness is treated within this community.
+                        </p>
+
+                        <p>
+                            It was presented at the Carolinas Communication Association Conference in September 2018 and published in the 
+                            <a href="https://digitalcommons.butler.edu/bjur/vol5/iss1/11/" target="_blank">Butler Journal of Undergraduate Research</a> 
+                            (Volume 5) in April 2019.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
     <footer>
@@ -33,14 +193,21 @@
             <p>FELECIA WILKINS</p>
             <p>web-developer 👩🏾‍💻</p>
         </section>
-
+    
         <section id="footer--links">
-            <a href="/index.html">about</a>
+            <a href="/">about</a>
             <a href="/projects.html" class="active">projects</a>
             <a href="/files/Wilkins-Felecia-Resume-2020.pdf" target="_blank">resume</a>
         </section>
-
+    
     </footer>
+
+    <script
+        src="https://code.jquery.com/jquery-3.5.1.js"
+        integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+        crossorigin="anonymous">
+    </script>
+    <script src="js/projects.js"></script>
 
 </body>
 </html>
