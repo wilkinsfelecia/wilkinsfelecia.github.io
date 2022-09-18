@@ -1,30 +1,316 @@
-body {
-  background-color: #0b090a;
-  color: #fff;
-  overflow: hidden;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  line-height: 1;
-  font-family: "Righteous", cursive;
+*,
+*:before,
+*:after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-a {
-  color: #a992e8;
+:root {
+  font-size: 62.5%;
+  font-family: "Karla", sans-serif;
+}
+
+body {
+  background-color: #141414;
+  color: #FFF;
+  font-size: 1.8rem;
+  font-weight: 300;
+}
+
+a,
+a:active,
+a:link,
+a:visited {
+  display: inline-block;
+  color: #FFF;
+  text-decoration: none;
+  vertical-align: text-bottom;
+  position: relative;
+  overflow: hidden;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2.5px;
+  background-color: #a59aff;
+  transition: all 1s;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  a::after {
+    background-image: linear-gradient(to right, #CEC9FD, #a59aff);
+  }
+}
+a:hover,
+a:focus {
   text-decoration: none;
 }
-    a:hover {
-        color: #fff;
-        transition: 0.5s all;
-        background-color: #5c31d3;
-    }
-
-h1 {
-  font-size: 3em;
+a:hover:after,
+a:focus:after {
+  transform: translateX(20rem);
 }
-h2 {
-  font-size: 2.5em;
+
+p {
+  margin: 1.75rem 0;
+}
+
+@-webkit-keyframes anim-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes anim-pulsate {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.25);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@-webkit-keyframes anim-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+@keyframes anim-wave {
+  0% {
+    transform: rotate(0deg);
+  }
+  10% {
+    transform: rotate(15deg);
+  }
+  20% {
+    transform: rotate(-5deg);
+  }
+  30% {
+    transform: rotate(10deg);
+  }
+  40% {
+    transform: rotate(15deg);
+  }
+  70% {
+    transform: rotate(-3deg);
+  }
+  80% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -moz-column-gap: 8rem;
+       column-gap: 8rem;
+  padding: 10rem;
+  height: 100vh;
+}
+
+.about__visuals {
+  display: grid;
+  place-items: center;
+  width: 42.1rem;
+  height: 42.1rem;
+}
+.about__visuals-border {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  border: 3px solid #a59aff;
+  border-radius: 1.6rem;
+  transform: rotate(-5deg);
+  z-index: 100;
+}
+.about__visuals-img {
+  grid-row: 1;
+  grid-column: 1;
+  border-radius: 1.6rem;
+  outline: 3px solid #FFF;
+  width: 100%;
+  height: 100%;
+}
+.about__visuals-caption {
+  grid-row: 1;
+  grid-column: 1;
+  width: 100%;
+  height: 100%;
+  font-size: 2rem;
+  background-image: linear-gradient(to bottom, rgba(206, 201, 253, 0.5), rgba(165, 154, 255, 0.5));
+  border-radius: 1.6rem;
+  transition: all 0.5s;
+  opacity: 0;
+  display: grid;
+  place-items: center;
+}
+.about__visuals:hover .about__visuals-caption {
+  opacity: 1;
+}
+.about__visuals:hover .about__visuals-caption span {
+  -webkit-animation-name: anim-pulsate;
+          animation-name: anim-pulsate;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.about__text {
+  width: 65rem;
+}
+
+.text-gradient {
+  color: #CEC9FD;
+  font-weight: 600;
+}
+.text-gradient:first-of-type {
+  font-style: italic;
+}
+
+@supports ((-webkit-background-clip: text) or (background-clip: text)) {
+  .text-gradient {
+    background-image: linear-gradient(to right, #CEC9FD, #a59aff);
+    -webkit-background-clip: text;
+            background-clip: text;
+    color: transparent;
+  }
+}
+.about__heading {
+  display: flex;
+  -moz-column-gap: 1rem;
+       column-gap: 1rem;
+  margin-bottom: 2rem;
+}
+.about__heading .emoji {
+  display: inline-block;
+}
+.about__heading-emoji,
+.about__heading h1 {
+  font-size: 5rem;
+  font-weight: 300;
+}
+.about__heading h2 {
+  font-size: 3rem;
+  font-weight: 300;
+}
+.about__heading:hover .emoji {
+  -webkit-animation-name: anim-wave;
+          animation-name: anim-wave;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-play-state: running;
+          animation-play-state: running;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+}
+
+.tech {
+  display: flex;
+  -moz-column-gap: 3rem;
+       column-gap: 3rem;
+}
+.tech-icon {
+  text-align: center;
+  font-size: 3rem;
+}
+.tech-icon i {
+  color: #CEC9FD;
+  text-shadow: 0 0 1rem rgba(255, 255, 255, 0.25);
+}
+.tech-icon p {
+  margin: 0.5rem 0 0 0;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.btn-resume {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border: 2px solid #FFF;
+  padding: 0.75rem 1.75rem;
+  margin-top: 1rem;
+  transition: all 0.25s;
+}
+.btn-resume::after {
+  display: none;
+}
+.btn-resume i {
+  margin-left: 0.5rem;
+  transition: all 0.25s;
+}
+.btn-resume:hover {
+  background-color: rgba(255, 255, 255, 0.25);
+}
+.btn-resume:hover i {
+  margin-left: 1.5rem;
+}
+
+@media screen and (max-width: 67.5em) {
+  .container {
+    flex-direction: column;
+    text-align: center;
+    height: auto;
+    padding: 3rem;
+  }
+  .about__visuals {
+    width: 20rem;
+    height: 20rem;
+  }
+  .about__heading {
+    display: block;
+    margin-top: 1.5rem;
+  }
+  .about__heading h1 {
+    font-size: 3.5rem;
+  }
+  .about__heading h2 {
+    font-size: 2.5rem;
+  }
+  .about__text {
+    width: auto;
+  }
+  .tech {
+    justify-content: center;
+  }
 }

@@ -1,8 +1,0 @@
-.connect a {
-  text-decoration: none;
-  margin: 0 1em;
-}
-    .connect a:hover {
-      fill: #fff;
-      background-color: transparent;
-    }
