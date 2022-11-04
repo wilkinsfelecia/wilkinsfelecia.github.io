@@ -83,22 +83,6 @@ a.btn-outline:hover i {
   margin-left: 1.5rem;
 }
 
-a.btn-link {
-  font-weight: 600;
-  padding-bottom: 0.5rem;
-  transition: all 0.5s;
-}
-a.btn-link:after {
-  display: none;
-}
-a.btn-link:not(:last-of-type) {
-  margin-right: 3rem;
-}
-a.btn-link i {
-  margin-right: 0.5rem;
-  vertical-align: middle;
-}
-
 h1 {
   font-size: 5rem;
   font-weight: 300;
