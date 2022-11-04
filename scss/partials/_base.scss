@@ -19,6 +19,7 @@ $color-light-purple: #CEC9FD;
 }
 
 body {
+   position: relative;
    color: $color-white;
    font-size: 1.8rem;
    font-weight: 300;
@@ -97,25 +98,6 @@ a.btn-outline {
    }
 }
 
-a.btn-link {
-   font-weight: 600;
-   padding-bottom: .5rem;
-   transition: all .5s;
-
-   &:after {
-      display: none;
-   }
-
-   &:not(:last-of-type) {
-      margin-right: 3rem;
-   }
-
-   i {
-      margin-right: .5rem;
-      vertical-align: middle;
-   }
-}
-
 h1 {
    font-size: 5rem;
    font-weight: 300;
@@ -134,6 +116,34 @@ h3 {
 
 p {
    margin: 1.75rem 0;
+}
+
+.scroll-to-top {
+   position: fixed;
+   bottom: 0;
+   right: 0;
+   width: 3rem;
+   height: 3rem;
+   margin: 2.5rem;
+   padding: 2rem;
+   font-size: 2.5rem;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   border: 0;
+   border-radius: 50%;
+   background-color: rgba(255, 255, 255, .25);
+   transition: all .25s;
+   cursor: pointer;
+
+   &:hover,
+   &:focus {
+      transform: translateY(-.25rem);
+   }
+
+   i {
+      color: $color-light-purple;
+   }
 }
 
 @keyframes anim-pulsate {
@@ -242,6 +252,10 @@ p {
       &:not(:last-of-type) {
          margin-bottom: 2rem;
       }
+   }
+
+   .scroll-to-top {
+      margin: .5rem;
    }
 
    .row {
