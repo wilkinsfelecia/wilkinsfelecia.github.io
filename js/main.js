@@ -15,8 +15,17 @@ const scrollToTarget = (elem) => {
 const btn_projects = document.querySelector('.btn-projects'),
    elm_projects = document.querySelector('#projects');
 
-btn_projects.addEventListener('click', function (e) {
-   e.preventDefault();
+
+let hash = window.location.hash.substring(1);
+
+if (hash == 'projects') {
+   if (elm_projects.classList.contains('hidden')) {
+      elm_projects.classList.remove('hidden');
+      scrollToTarget(elm_projects);
+   }
+}
+
+btn_projects.addEventListener('click', function () {
    elm_projects.classList.remove('hidden');
    scrollToTarget(elm_projects);
    btn_scroll_to_top.classList.remove('hidden');
@@ -30,9 +39,11 @@ btn_scroll_to_top.addEventListener('click', () => {
       left: 0,
       behavior: 'smooth'
    });
+
+   window.location.hash = "";
 });
 
-const elmAbout = document.querySelector('.container-about');
+const elmAbout = document.querySelector('.about');
 
 const iOptions = {
    root: null,
@@ -43,14 +54,11 @@ const isIntersecting = element => {
    element.forEach(elm => {
       if (elm.isIntersecting) {
          btn_scroll_to_top.classList.add('hidden');
-         console.log('visible')
       } else {
          btn_scroll_to_top.classList.remove('hidden');
-         console.log('not')
       }
    });
 }
 
 const iObserver = new IntersectionObserver(isIntersecting, iOptions);
-
 iObserver.observe(elmAbout);
