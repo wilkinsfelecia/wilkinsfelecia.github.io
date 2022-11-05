@@ -267,7 +267,7 @@ p {
   height: auto;
 }
 
-.container-about {
+.about {
   background-color: #141414;
   display: flex;
   align-items: center;
@@ -387,24 +387,24 @@ p {
   font-size: 1.3rem;
 }
 
-.container-projects {
+.projects {
   background-color: #1b1b1b;
 }
-.container-projects .heading {
+.projects .heading {
   margin-bottom: 2rem;
 }
-.container-projects .heading p {
+.projects .heading p {
   display: block;
   font-size: 1.4rem;
-  margin: 0;
+  margin: 0 0 0.5rem 0;
 }
-.container-projects a.has-image {
+.projects a.has-image {
   position: relative;
   border-radius: 0.5rem;
   line-height: 0;
   padding-bottom: 0;
 }
-.container-projects a.has-image:before {
+.projects a.has-image:before {
   content: "";
   position: absolute;
   width: 100%;
@@ -414,19 +414,19 @@ p {
   filter: brightness(0.8);
   transition: background-color 0.5s, mix-blend-mode 1s, filter 2s;
 }
-.container-projects a.has-image:after {
+.projects a.has-image:after {
   display: none;
 }
-.container-projects a.has-image:hover::before {
+.projects a.has-image:hover::before {
   background-color: transparent;
   filter: none;
 }
-.container-projects img {
+.projects img {
   width: auto;
   max-width: 100%;
   border-radius: 0.5rem;
 }
-.container-projects ul.tech-used {
+.projects ul.tech-used {
   list-style: none;
   margin: 1rem 0;
   font-size: 1.2rem;
@@ -453,7 +453,7 @@ p {
   .about__text {
     width: 100%;
   }
-  .container-projects .heading p {
+  .projects .heading p {
     font-size: 1.4rem;
   }
 }
